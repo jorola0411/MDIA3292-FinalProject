@@ -1,62 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link href="/artisan/css/main.css" rel="stylesheet" type="text/css" >
-</head>
-<body>
-    <navbar class="flex justify-between items-center  p-4 rounded-lg">
-        <div class="flex gap-2">
-          <button class="bg-black text-white px-4 py-2 rounded">Lorem Ipsum</button>
-          <button class="bg-black text-white px-4 py-2 rounded">Lorem Ipsum</button>
-          <button class="bg-black text-white px-4 py-2 rounded">Lorem Ipsum</button>
-        </div>
-        <div class="flex gap-2">
-          <button class="bg-black text-white px-4 py-2 rounded">Lorem Ipsum</button>
-          <button class="bg-black text-white px-4 py-2 rounded">Lorem Ipsum</button>
-          <button class="bg-black text-white px-4 py-2 rounded">Lorem Ipsum</button>
-        </div>
-    </navbar>
 
-    <div class=" min-h-screen p-4">
-     
-        <h1 class="text-center text-2xl font-bold mt-6">Lorem</h1>
-      
-        <!-- Card Section -->
-        <div class="mt-8">
-       
-          <div>
-            <h2 class="text-xl font-bold">Lorem Ipsum</h2>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Navbar Styles not using Tailwind -->
+  <link rel="stylesheet" href="css/navigation.css">
+
+  <!-- Adobe Fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/bwg3lcf.css">
+
+  <!-- icons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div class="container">
+    <nav>
+      <div class="primary-nav">
+        <div class="primary-nav-container w-10/12 mx-auto">
+          <div class="nav-items">
+            <div class="nav-item toggle">
+              <span>
+                <div id="menu-toggle-btn">
+                  <span></span>
+                </div>
+              </span>
+            </div>
+            <div class="nav-item logo text-beige"><span>logo</span></div>
+            <div class="nav-item search">
+              <span><ion-icon name="cart-outline" class="text-beige"></ion-icon></span>
+            </div>
           </div>
-      
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-     
-            <div>
-              <div class="bg-gray-300 h-64 rounded-lg"></div>
-              <p class="font-bold mt-2">Lorem Ipsum</p>
+        </div>
+        <div class="nav-links w-10/12 mx-auto">
+          <div class="nav-info text-beige">opening soon - stay tuned</div>
+
+          <div class="nav-links-wrapper">
+            <div class="nav-link">
+              <a href="#">featured
+                <span><ion-icon name="star-outline"></ion-icon></span></a>
             </div>
-      
-           
-            <div>
-              <div class="bg-gray-300 h-32 rounded-lg"></div>
-              <p class="font-bold mt-2">Lorem Ipsum</p>
+            <div class="nav-link">
+              <a href="#">best sellers
+                <span><ion-icon name="trending-up"></ion-icon>
+              </a>
             </div>
-      
-     
-            <div>
-              <div class="bg-gray-300 h-32 rounded-lg"></div>
-              <p class="font-bold mt-2">Lorem Ipsum</p>
+            <div class="nav-link">
+              <a href="#">our picks
+                <span><ion-icon name="checkmark-circle-outline"></ion-icon></a>
             </div>
-      
-            <div class="sm:col-span-2 lg:col-span-3">
-              <div class="bg-gray-300 h-40 rounded-lg"></div>
-              <p class="font-bold mt-2">Lorem Ipsum</p>
+            <div class="nav-link">
+              <a href="#">gift ideas
+                <span><ion-icon name="gift-outline"></ion-icon></a>
+            </div>
+
+            <br />
+
+            <div class="nav-link">
+              <a href="index.html">home</a>
+            </div>
+
+            <div class="nav-link">
+              <a href="featured.html">shop</a>
+            </div>
+
+            <div class="nav-link">
+              <a href="artist.html">the artisans</a>
+            </div>
+
+            <br />
+
+            <div class="nav-link">
+              <a href="#">about</a>
+            </div>
+            <div class="nav-link">
+              <a href="#">support us</a>
+            </div>
+            <div class="nav-link">
+              <a href="#">become an artisan</a>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="nav-socials">
+            <div class="nav-social">
+              <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            </div>
+            <div class="nav-social">
+              <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            </div>
+            <div class="nav-social">
+              <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+            </div>
+            <div class="nav-social">
+              <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
             </div>
           </div>
         </div>
       </div>
-      
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <div
+    class="flex pt-20 px-6 md:px-6 pl-6 lg:px-0 lg:pl-20 items-center justify-center bg-beige md:h-screen overflow-hidden">
+    <div class="flex flex-col gap-6 md:flex-row items-center max-w-8xl">
+      <div class="w-full md:w-1/2 lg:pr-32">
+        <h2 class="text-4xl lg:text-5xl text-center md:text-left text-dark-green leading-tight font-1-reg">shop
+          handmade, shop unique.</h2>
+        <h3
+          class="mt-6 md:mt-10 text-md lg:text-xl text-center md:text-left text-dark-green font-light tracking-wider leading-relaxed font-2-light">
+          welcome to our marketplace, where creativity and craftsmanship meet to bring you a curated
+          selection of handmade, one-of-a-kind products. we proudly showcase the work of talented artisans from our
+          community.
+        </h3>
+        <div class="mt-10 flex flex-col sm:flex-row justify-center md:justify-start">
+          <a href="featured.html"
+            class="w-full sm:w-40 px-4 py-3 rounded-3xl font-2-bold text-md text-lime border-2 border-lime text-center">shop</a>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 flex justify-center md:justify-end mb-8">
+        <img src="img/hero.jpg" class="w-full h-auto object-cover">
+      </div>
+    </div>
+  </div>
+
+  <!-- Content Introduction -->
+  <section class="bg-lime">
+    <div class="gap-16 items-center py-8 px-4 mx-auto w-11/12 lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+      <div class="grid grid-cols-2 gap-4 mt-8">
+        <img class="w-full mb-10" src="img/art.jpg" alt="office content 1">
+        <img class="w-full max-h-96 h-auto object-cover" src="img/dragon.jpg" alt="office content 2">
+      </div>
+      <div class="font-light text-gray-500 sm:text-lg ">
+        <h2 class="mb-6 text-5xl font-1-bold text-beige lowercase">Giving Local Artists a Space to Shine</h2>
+        <p class="mb-4 text-beige font-2-light">we’re all about helping local artists share their work and connect with
+          the community. We know how important it is for creative people to have a platform where they can show off
+          their talent and grow their audience.</p>
+        <p class="mb-4 text-beige font-2-light lowercase">We believe in supporting local talent, so if you’re an artist
+          looking to get your work in front of more people, we’re here to help you make that happen. Let’s build
+          something great together!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-beige">
+
+    <div class="w-11/12 mx-auto">
+
+      <div class="text-center mb-12">
+        <h2 class="text-5xl font-1-bold text-dark-green mb-4 lowercase">best sellers</h2>
+        <p class="text-lg font-2-reg text-lime">crafted by your local artisans</p>
+      </div>
+
+      <!-- Card Section -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
+
+        <!-- Card 1 -->
+        <div class="overflow-hidden">
+          <img class="w-full h-96 object-cover" src="img/mug.jpg" alt="Service 1">
+          <div class="pt-4">
+            <div class="flex gap-6 items-end">
+              <h3 class="text-2xl font-2-bold text-dark-green mb-3 leading-3 lowercase">Angus Mug</h3>
+              <p class="text-lg font-1-reg text-dark-green">$19.99</p>
+            </div>
+            <p class="text-dark-green lowercase font-2-reg">The cutest mug made by the class rep!</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="overflow-hidden">
+          <img class="w-full h-96 object-cover" src="img/josecat.jpg" alt="Joses Cats">
+          <div class="pt-4">
+            <div class="flex gap-6 items-end">
+              <h3 class="text-2xl font-2-bold text-dark-green mb-3 leading-3 lowercase">Jose's Cats</h3>
+              <p class="text-lg font-1-reg text-dark-green ">$12.99</p>
+            </div>
+            <p class="text-dark-green lowercase font-2-reg">They're... special...</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="overflow-hidden">
+          <img class="w-full h-96 object-cover" src="img/johanntoy.jpg" alt="Johanns stuff toy">
+          <div class="pt-4">
+            <div class="flex gap-6 items-end">
+              <h3 class="text-2xl font-2-bold text-dark-green mb-3 leading-3 lowercase">Po's stuffies</h3>
+              <p class="text-lg font-1-reg text-dark-green ">$499.99</p>
+            </div>
+            <p class="text-dark-green lowercase font-2-reg">cute, no?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-20 flex flex-col sm:flex-row justify-center md:justify-center">
+        <a href="featured.html"
+          class="w-full sm:w-40 px-4 py-3 rounded-3xl font-2-bold text-md text-lime border-2 border-lime text-center">browse
+          all</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative pt-8 pb-6 bg-dark-green text-beige">
+    <div class="w-11/12 mx-auto">
+      <div class="flex flex-wrap text-left lg:text-left">
+        <div class="w-11/12 mx-auto lg:w-6/12 px-4">
+          <h4 class="text-3xl font-1-bold lowercase">Insert the logo</h4>
+          <h5 class="text-lg mt-2 mb-2 text-darkGreen font-1-reg lowercase">
+            Find us on any of these platforms, we respond 1-2 business days.
+          </h5>
+          <div class="mt-6 lg:mb-0 mb-6">
+            <ion-icon name="logo-instagram" class="mr-4"></ion-icon>
+            <ion-icon name="logo-facebook" class="mr-4"></ion-icon>
+            <ion-icon name="logo-youtube" class="mr-4"></ion-icon>
+            <ion-icon name="logo-twitter" class="mr-4"></ion-icon>
+          </div>
+        </div>
+        <div class="w-full lg:w-6/12">
+          <div class="flex flex-wrap items-top mb-6">
+            <div class="w-full lg:w-4/12 px-4 ml-auto">
+              <span class="block lowercase text-md font-2-bold mb-2">useful Links</span>
+              <ul class="list-unstyled">
+                <li>
+                  <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">about us</a>
+                </li>
+                <li>
+                  <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Blog</a>
+                </li>
+                <li>
+                  <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Featured</a>
+                </li>
+                <li>
+                  <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Our Artisans</a>
+                </li>
+              </ul>
+            </div>
+            <div class="w-full lg:w-4/12 px-4">
+              <span class="block lowercase text-md font-2-bold mb-2">Other Resources</span>
+              <ul class="list-unstyled">
+                <li>
+                  <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Become an Artisan</a>
+                </li>
+                <li>
+                  <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Terms &amp; Conditions</a>
+                </li>
+                <li>
+                  <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Privacy Policy</a>
+                </li>
+                <li>
+                  <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <hr class="my-6 border-beige">
+      <div class="flex flex-wrap items-center md:justify-between justify-center">
+        <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+          <div class="text-sm text-blueGray-500 font-2-bold py-1 lowercase">
+            This is the final project for MDIA 3292. Made by Angus, Jose, Johann.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP Navbar -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
+  <!-- Script Nav bar -->
+  <script src="js/nav.js"></script>
 </body>
+
 </html>

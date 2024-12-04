@@ -1,81 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Featured</title>
-    <link href="/artisan/css/main.css" rel="stylesheet" type="text/css" >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Featured</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Navbar Styles not using Tailwind -->
+  <link rel="stylesheet" href="css/navigation.css">
+
+  <!-- Adobe Fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/bwg3lcf.css">
+
+  <!-- icons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    
-        <!-- Navbar -->
-        <div class="flex justify-between items-center  p-4 rounded-lg">
-          <div class="flex gap-2">
-            <button class="bg-black text-white px-4 py-2 rounded">Lorem Ipsum</button>
-            <button class="bg-black text-white px-4 py-2 rounded">Lorem Ipsum</button>
-            <button class="bg-black text-white px-4 py-2 rounded">Lorem Ipsum</button>
-          </div>
-          <div class="flex gap-2">
-            <button class="bg-black text-white px-4 py-2 rounded">Lorem Ipsum</button>
-            <button class="bg-black text-white px-4 py-2 rounded">Lorem Ipsum</button>
-            <button class="bg-black text-white px-4 py-2 rounded">Lorem Ipsum</button>
+  <!-- NAVBAR -->
+  <div class="container">
+    <nav>
+      <div class="primary-nav">
+        <div class="primary-nav-container w-10/12 mx-auto">
+          <div class="nav-items">
+            <div class="nav-item toggle">
+              <span>
+                <div id="menu-toggle-btn">
+                  <span></span>
+                </div>
+              </span>
+            </div>
+            <div class="nav-item logo text-beige"><span>logo</span></div>
+            <div class="nav-item search">
+              <span><ion-icon name="cart-outline" class="text-beige"></ion-icon></span>
+            </div>
           </div>
         </div>
-        <div class=" min-h-screen p-4 w-2/3 mx-auto">
-        <!-- Page Title -->
-        <h1 class="text-center text-2xl font-bold mt-6">Lorem</h1>
-      
-        <!-- Card Grid Section -->
-        <div class="mt-8">
-          <!-- Section Title -->
-          <div class="text-center">
-            <h2 class="text-xl font-bold">Lorem Ipsum</h2>
-            <p class="text-gray-500">Lorem ipsum</p>
+        <div class="nav-links w-10/12 mx-auto">
+          <div class="nav-info text-beige">opening soon - stay tuned</div>
+
+          <div class="nav-links-wrapper">
+            <div class="nav-link">
+              <a href="#">featured
+                <span><ion-icon name="star-outline"></ion-icon></span></a>
+            </div>
+            <div class="nav-link">
+              <a href="#">best sellers
+                <span><ion-icon name="trending-up"></ion-icon>
+              </a>
+            </div>
+            <div class="nav-link">
+              <a href="#">our picks
+                <span><ion-icon name="checkmark-circle-outline"></ion-icon></a>
+            </div>
+            <div class="nav-link">
+              <a href="#">gift ideas
+                <span><ion-icon name="gift-outline"></ion-icon></a>
+            </div>
+
+            <br />
+
+            <div class="nav-link">
+              <a href="index.html">home</a>
+            </div>
+
+            <div class="nav-link">
+              <a href="featured.html">shop</a>
+            </div>
+
+            <div class="nav-link">
+              <a href="artist.html">the artisans</a>
+            </div>
+
+            <br />
+
+            <div class="nav-link">
+              <a href="#">about</a>
+            </div>
+            <div class="nav-link">
+              <a href="#">support us</a>
+            </div>
+            <div class="nav-link">
+              <a href="#">become an artisan</a>
+            </div>
           </div>
-      
-          <!-- Cards -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-            <!-- Card -->
-            <div class="bg-white rounded-lg p-4">
-              <div class="h-32 bg-gray-200 rounded-lg mb-4"></div>
-              <div class="flex justify-between items-center">
-                <p class="font-bold">Lorem Ipsum</p>
-                <p class="font-bold text-gray-700">$75 CAD</p>
-              </div>
-              <hr class="my-2" />
-              <p class="text-gray-600 text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie...
-              </p>
+
+          <br />
+
+          <div class="nav-socials">
+            <div class="nav-social">
+              <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
             </div>
-      
-            <!-- Card -->
-            <div class="bg-white  rounded-lg p-4">
-              <div class="h-32 bg-gray-200 rounded-lg mb-4"></div>
-              <div class="flex justify-between items-center">
-                <p class="font-bold">Lorem Ipsum</p>
-                <p class="font-bold text-gray-700">$100 CAD</p>
-              </div>
-              <hr class="my-2" />
-              <p class="text-gray-600 text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie...
-              </p>
+            <div class="nav-social">
+              <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
             </div>
-      
-            <!-- Card -->
-            <div class="bg-white  rounded-lg p-4">
-              <div class="h-32 bg-gray-200 rounded-lg mb-4"></div>
-              <div class="flex justify-between items-center">
-                <p class="font-bold">Lorem Ipsum</p>
-                <p class="font-bold text-gray-700">$125 CAD</p>
-              </div>
-              <hr class="my-2" />
-              <p class="text-gray-600 text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie...
-              </p>
+            <div class="nav-social">
+              <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+            </div>
+            <div class="nav-social">
+              <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
             </div>
           </div>
         </div>
       </div>
-      
+    </nav>
+  </div>
+
+  <!-- Content here -->
+  <div class=" min-h-screen w-11/12 mx-auto">
+    <!-- Page Title -->
+    <h1 class="text-center text-2xl font-bold pt-20">Lorem</h1>
+
+    <!-- Card Grid Section -->
+    <div class="mt-8">
+      <!-- Section Title -->
+      <div class="text-center">
+        <h2 class="text-xl font-bold">Lorem Ipsum</h2>
+        <p class="text-gray-500">Lorem ipsum</p>
+      </div>
+
+      <!-- Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+        <!-- Card -->
+        <div class="bg-white rounded-lg p-4">
+          <div class="h-32 bg-gray-200 rounded-lg mb-4"></div>
+          <div class="flex justify-between items-center">
+            <p class="font-bold">Lorem Ipsum</p>
+            <p class="font-bold text-gray-700">$75 CAD</p>
+          </div>
+          <hr class="my-2" />
+          <p class="text-gray-600 text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie...
+          </p>
+        </div>
+
+        <!-- Card -->
+        <div class="bg-white  rounded-lg p-4">
+          <div class="h-32 bg-gray-200 rounded-lg mb-4"></div>
+          <div class="flex justify-between items-center">
+            <p class="font-bold">Lorem Ipsum</p>
+            <p class="font-bold text-gray-700">$100 CAD</p>
+          </div>
+          <hr class="my-2" />
+          <p class="text-gray-600 text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie...
+          </p>
+        </div>
+
+        <!-- Card -->
+        <div class="bg-white  rounded-lg p-4">
+          <div class="h-32 bg-gray-200 rounded-lg mb-4"></div>
+          <div class="flex justify-between items-center">
+            <p class="font-bold">Lorem Ipsum</p>
+            <p class="font-bold text-gray-700">$125 CAD</p>
+          </div>
+          <hr class="my-2" />
+          <p class="text-gray-600 text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie...
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="relative pt-8 pb-6 bg-dark-green text-beige">
+    <div class="w-11/12 mx-auto">
+      <div class="flex flex-wrap text-left lg:text-left">
+        <div class="w-11/12 mx-auto lg:w-6/12 px-4">
+          <h4 class="text-3xl font-1-bold lowercase">Insert the logo</h4>
+          <h5 class="text-lg mt-2 mb-2 text-darkGreen font-1-reg lowercase">
+            Find us on any of these platforms, we respond 1-2 business days.
+          </h5>
+          <div class="mt-6 lg:mb-0 mb-6">
+            <ion-icon name="logo-instagram" class="mr-4"></ion-icon>
+            <ion-icon name="logo-facebook" class="mr-4"></ion-icon>
+            <ion-icon name="logo-youtube" class="mr-4"></ion-icon>
+            <ion-icon name="logo-twitter" class="mr-4"></ion-icon>
+          </div>
+        </div>
+        <div class="w-full lg:w-6/12">
+          <div class="flex flex-wrap items-top mb-6">
+            <div class="w-full lg:w-4/12 px-4 ml-auto">
+              <span class="block lowercase text-md font-2-bold mb-2">useful Links</span>
+              <ul class="list-unstyled">
+                <li>
+                  <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">about us</a>
+                </li>
+                <li>
+                  <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Blog</a>
+                </li>
+                <li>
+                  <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Featured</a>
+                </li>
+                <li>
+                  <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Our Artisans</a>
+                </li>
+              </ul>
+            </div>
+            <div class="w-full lg:w-4/12 px-4">
+              <span class="block lowercase text-md font-2-bold mb-2">Other Resources</span>
+              <ul class="list-unstyled">
+                <li>
+                  <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Become an Artisan</a>
+                </li>
+                <li>
+                  <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Terms &amp; Conditions</a>
+                </li>
+                <li>
+                  <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Privacy Policy</a>
+                </li>
+                <li>
+                  <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <hr class="my-6 border-beige">
+      <div class="flex flex-wrap items-center md:justify-between justify-center">
+        <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+          <div class="text-sm text-blueGray-500 font-2-bold py-1 lowercase">
+            This is the final project for MDIA 3292. Made by Angus, Jose, Johann.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP Navbar -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
+  <!-- Script Nav bar -->
+  <script src="js/nav.js"></script>
+
 </body>
+
 </html>

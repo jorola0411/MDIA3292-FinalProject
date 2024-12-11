@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Navbar Styles not using Tailwind -->
+    <link rel="stylesheet" href="css/navigation.css">
+    <!-- masonry css -->
+    <link rel="stylesheet" href="css/masonry.css">
+
+    <!-- Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/bwg3lcf.css">
+
+    <!-- icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="container">
+        <nav>
+            <div class="primary-nav">
+                <div class="primary-nav-container w-10/12 mx-auto">
+                    <div class="nav-items">
+                        <div class="nav-item toggle">
+                            <div>
+                                <div id="menu-toggle-btn">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-item logo text-beige"> <img src="img/logo.png"
+                                class="object-cover w-1/2 h-full items-center text-center justify-center" alt="logo">
+                        </div>
+                        <div class="nav-item search">
+                            <span><ion-icon name="cart-outline" class="text-beige"></ion-icon></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-links w-10/12 mx-auto">
+                    <div class="nav-info text-beige">opening soon - stay tuned</div>
+
+                    <div class="nav-links-wrapper">
+                        <div class="nav-link">
+                            <a href="#">featured
+                                <span><ion-icon name="star-outline"></ion-icon></span></a>
+                        </div>
+                        <div class="nav-link">
+                            <a href="ourpicks.html">our picks
+                                <span><ion-icon name="checkmark-circle-outline"></ion-icon></span>
+                            </a>
+                        </div>
+
+                        <br />
+
+                        <div class="nav-link">
+                            <a href="index.html">home</a>
+                        </div>
+
+                        <div class="nav-link">
+                            <a href="featured.html">shop</a>
+                        </div>
+
+                        <div class="nav-link">
+                            <a href="artist.html">the artisans</a>
+                        </div>
+
+                        <br />
+
+                        <div class="nav-link">
+                            <a href="#">about</a>
+                        </div>
+                        <div class="nav-link">
+                            <a href="#">support us</a>
+                        </div>
+                        <div class="nav-link">
+                            <a href="#">become an artisan</a>
+                        </div>
+                    </div>
+
+                    <br />
+
+                    <div class="nav-socials">
+                        <div class="nav-social">
+                            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        </div>
+                        <div class="nav-social">
+                            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        </div>
+                        <div class="nav-social">
+                            <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+                        </div>
+                        <div class="nav-social">
+                            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Content here -->
+    <div class="w-11/12 mx-auto">
+        <!-- Page Title -->
+        <h1 class="text-center text-6xl font-bold pt-32 font-1-bold text-dark-green">Our Picks</h1>
+
+        <!-- Card Grid Section -->
+        <div class="mt-8">
+            <!-- Section Title -->
+            <div class="text-center mb-10">
+                <h2 class="text-xl font-2-bold text-lime">Artists in Your Area</h2>
+                <p class="text-gray-500 font-2-light">Vancouver BC.</p>
+            </div>
+
+            <!-- Cards -->
+            <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
+                <div class="grid-item">
+                    <img src="img/dragon.jpg" alt="">
+                </div>
+                <div class="grid-item">
+                    <a href="product.html"><img src="img/featured_album_billboard.jpg" alt=""></a>
+                </div>
+                <div class="grid-item">
+                    <a href="product.html"><img src="img/featured_book.jpg" alt=""></a>
+                </div>
+                <div class="grid-item">
+                    <a href="product.html"><img src="img/featured_illustration.jpg" alt=""></a>
+                </div>
+                <div class="grid-item">
+                    <a href="product.html"><img src="img/featured_eye.jpg" alt=""></a>
+                </div>
+                <div class="grid-item">
+                    <a href="product.html"><img src="img/featured_collage.jpg" alt=""></a>
+                </div>
+                <div class="grid-item">
+                    <a href="product.html"><img src="img/featured_cassette.jpg" alt=""></a>
+                </div>
+                <div class="grid-item">
+                    <a href="product.html"><img src="img/jao_papermachet.jpg" alt=""></a>
+                </div>
+                <div class="grid-item">
+                    <a href="product.html"><img src="img/johanntoy.jpg" alt=""></a>
+                </div>
+                <div class="grid-item">
+                    <a href="product.html"><img src="img/josecat.jpg" alt=""></a>
+                </div>
+                <div class="grid-item">
+                    <a href="product.html"><img src="img/product_album_back.png" alt="">
+                </div>
+                <div class="grid-item">
+                    <a href="product.html"><img src="img/josecat.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="relative pt-8 pb-6 bg-dark-green text-beige">
+        <div class="w-11/12 mx-auto">
+            <div class="flex flex-wrap text-left lg:text-left">
+                <div class="w-11/12 mx-auto lg:w-6/12 px-4">
+                    <h4 class="text-3xl font-1-bold  ">
+                        <img src="img/logo.png"
+                            class="object-cover w-1/2 h-full items-center text-center justify-center" alt="logo">
+                    </h4>
+                    <h5 class="text-lg mt-2 mb-2 text-darkGreen font-1-reg  ">
+                        Find us on any of these platforms, we respond 1-2 business days.
+                    </h5>
+                    <div class="mt-6 lg:mb-0 mb-6">
+                        <ion-icon name="logo-instagram" class="mr-4"></ion-icon>
+                        <ion-icon name="logo-facebook" class="mr-4"></ion-icon>
+                        <ion-icon name="logo-youtube" class="mr-4"></ion-icon>
+                        <ion-icon name="logo-twitter" class="mr-4"></ion-icon>
+                    </div>
+                </div>
+                <div class="w-full lg:w-6/12">
+                    <div class="flex flex-wrap items-top mb-6">
+                        <div class="w-full lg:w-4/12 px-4 ml-auto">
+                            <span class="block   text-md font-2-bold mb-2">Useful Links</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">About Us</a>
+                                </li>
+                                <li>
+                                    <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Blog</a>
+                                </li>
+                                <li>
+                                    <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Featured</a>
+                                </li>
+                                <li>
+                                    <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Our Artisans</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-full lg:w-4/12 px-4">
+                            <span class="block   text-md font-2-bold mb-2">Other Resources</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Become an
+                                        Artisan</a>
+                                </li>
+                                <li>
+                                    <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Terms &amp;
+                                        Conditions</a>
+                                </li>
+                                <li>
+                                    <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Privacy
+                                        Policy</a>
+                                </li>
+                                <li>
+                                    <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="my-6 border-beige">
+            <div class="flex flex-wrap items-center md:justify-between justify-center">
+                <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+                    <div class="text-sm text-blueGray-500 font-2-bold py-1  ">
+                        This is the final project for MDIA 3292. Made by Angus, Jose, Johann.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Masonry -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const grid = document.querySelector('.grid');
+            new Masonry(grid, {
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-item', // Use percentage-based column sizing
+                percentPosition: true,    // Dynamically adjusts to responsive CSS
+                gutter: 10,               // Adds spacing between items
+            });
+        });
+    </script>
+    <!-- GSAP Navbar -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
+    <!-- Script Nav bar -->
+    <script src="js/nav.js"></script>
+
+</body>
+
+</html>

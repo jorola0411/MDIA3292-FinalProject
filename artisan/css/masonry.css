@@ -1,0 +1,28 @@
+.grid {
+  margin: 0 auto;
+  z-index: 0;
+  display: block; 
+}
+.grid-item {
+  width: 100%;
+  margin-bottom: 20px; 
+}
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+@media (min-width: 768px) {
+  .grid-item {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (min-width: 1028px) {
+  .grid-item {
+    width: calc(33.333% - 10px); 
+  }
+}
+

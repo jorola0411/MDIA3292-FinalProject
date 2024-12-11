@@ -49,10 +49,6 @@
 
                     <div class="nav-links-wrapper">
                         <div class="nav-link">
-                            <a href="#">featured
-                                <span><ion-icon name="star-outline"></ion-icon></span></a>
-                        </div>
-                        <div class="nav-link">
                             <a href="ourpicks.html">our picks
                                 <span><ion-icon name="checkmark-circle-outline"></ion-icon></span>
                             </a>
@@ -65,7 +61,7 @@
                         </div>
 
                         <div class="nav-link">
-                            <a href="featured.html">shop</a>
+                            <a href="shop.html">shop</a>
                         </div>
 
                         <div class="nav-link">
@@ -117,44 +113,51 @@
             <div class="text-center mb-10">
                 <h2 class="text-xl font-2-bold text-lime">Artists in Your Area</h2>
                 <p class="text-gray-500 font-2-light">Vancouver BC.</p>
+
+                <div class="filters-button-group text-center my-8">
+                    <button class="filter-btn text-white" data-filter="*">Show All</button>
+                    <button class="filter-btn text-white" data-filter=".art">Art</button>
+                    <button class="filter-btn text-white" data-filter=".craft">Craft</button>
+                </div>
             </div>
 
             <!-- Cards -->
-            <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
-                <div class="grid-item">
+            <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'
+                data-isotope='{ "itemSelector": ".grid-item", "layoutMode": "fitRows" }'>
+                <div class="grid-item craft">
                     <img src="img/dragon.jpg" alt="">
                 </div>
-                <div class="grid-item">
+                <div class="grid-item art">
                     <a href="product.html"><img src="img/featured_album_billboard.jpg" alt=""></a>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item art">
                     <a href="product.html"><img src="img/featured_book.jpg" alt=""></a>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item art">
                     <a href="product.html"><img src="img/featured_illustration.jpg" alt=""></a>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item art">
                     <a href="product.html"><img src="img/featured_eye.jpg" alt=""></a>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item art">
                     <a href="product.html"><img src="img/featured_collage.jpg" alt=""></a>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item art">
                     <a href="product.html"><img src="img/featured_cassette.jpg" alt=""></a>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item craft">
                     <a href="product.html"><img src="img/jao_papermachet.jpg" alt=""></a>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item craft">
                     <a href="product.html"><img src="img/johanntoy.jpg" alt=""></a>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item craft">
                     <a href="product.html"><img src="img/josecat.jpg" alt=""></a>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item art">
                     <a href="product.html"><img src="img/product_album_back.png" alt="">
                 </div>
-                <div class="grid-item">
+                <div class="grid-item craft">
                     <a href="product.html"><img src="img/josecat.jpg" alt="">
                 </div>
             </div>
@@ -251,6 +254,34 @@
 
     <!-- Script Nav bar -->
     <script src="js/nav.js"></script>
+
+    <!-- Isotope -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initialize Isotope
+            const grid = document.querySelector('.grid');
+            const iso = new Isotope(grid, {
+                itemSelector: '.grid-item',
+                layoutMode: 'masonry',
+                masonry: {
+                    columnWidth: '.grid-item',
+                    percentPosition: true,
+                    gutter: 10
+                }
+            });
+
+            // Filter items on button click
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filterValue = button.getAttribute('data-filter');
+                    iso.arrange({ filter: filterValue });
+                });
+            });
+        });
+    </script>
+
 
 </body>
 

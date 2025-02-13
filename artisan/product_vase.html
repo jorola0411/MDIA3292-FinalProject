@@ -41,7 +41,7 @@
                 class="object-cover w-1/2 h-full items-center text-center justify-center" alt="logo">
             </div>
             <div class="nav-item search">
-              <span><ion-icon name="cart-outline" class="text-beige"></ion-icon></span>
+              <a href="cart.html"><span><ion-icon name="cart-outline" class="text-beige"></ion-icon></span></a>
             </div>
           </div>
         </div>
@@ -107,10 +107,16 @@
   <div class="min-h-screen w-11/12 mx-auto p-4 mb-12">
 
     <div class="flex justify-between items-center  p-4 rounded-lg pt-12">
-      <h1 class="text-center text-6xl font-2-bold mt-6 text-dark-green">ABSTRACT CERAMIC BOWL</h1>
+      <h1 class="text-center text-6xl font-2-bold mt-6 text-dark-green">VAH-SE</h1>
       <div class="mt-20 flex flex-col sm:flex-row justify-center md:justify-center">
-        <a href="featured.html"
-          class="w-full sm:w-40 px-4 py-3 rounded-3xl font-2-bold text-md text-lime border-2 border-lime text-center">Add to Cart</a>
+        <button
+          class="filter-btn text-white"
+          onclick="addToCart(2, 'Vah-se', 100.00,'img/vase_mockup.jpg')">Add to Cart
+        </button>
+        <button
+          class="filter-btn text-white"
+          onclick="addToFavs()">Add to Favorites
+        </button>
       </div>
     </div>
     <!-- Card Section -->
@@ -120,21 +126,22 @@
 
         <div class="lg:col-span-3 lg:row-span-2">
           <div class="bg-black h-auto rounded-lg">
-            <img src="img/bowl_mockup.jpg" class="object-cover w-full h-full rounded-lg" alt="featured album hero image">
+            <img src="img/Vase_mockup.jpg"object-cover w-full h-full rounded-lg" alt="featured album hero image">
           </div>
         </div>
 
 
         <div class="lg:col-span-1">
           <div class="bg-black h-[290px] rounded-lg">
-            <model-viewer src="img/statue.glb" alt="3D model of a bowl" auto-rotate camera-controls></model-viewer>
+            <model-viewer src="glb/vase.glb" alt="3D model of a bowl" auto-rotate camera-controls></model-viewer>
           </div>
         </div>
 
         <div class="lg:col-span-1">
           <div class="bg-black h-auto rounded-2xl">
-            <img src="img/bowl_qr.png" class="object-cover w-auto " alt="featured album front image">
+            <img src="img/vase_qr.png" class="object-cover w-auto " alt="featured album front image">
           </div>
+          <p class="text-right text-7xl">$100.00</p>
         </div>
 
 
@@ -142,23 +149,20 @@
       </div>
       <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 text-dark-green">
       <p class="text-dark-green">
-        <strong class="text-4xl font-1-bold">Abstract Ceramic Bowl Overview</strong>
+        <strong class="text-4xl font-1-bold">Vah-se Overview</strong>
         <br>
         <br>
-        This passion project reimagines the traditional ceramic bowl as a sculptural masterpiece, embracing the elegance of black as a defining element. Inspired by abstract forms and organic textures, the Black Abstract Ceramic Bowl transforms a simple dining essential into a bold statement piece.
-
-        With its deep, matte or glossy black finish, fluid contours, and tactile surfaces, this design explores the balance between minimalism and artistic expression. The interplay of light and shadow enhances its sculptural quality, making it as much a functional piece as it is a work of art. Whether used for dining or displayed as a modern decor accent, this bowl embodies sophistication, versatility, and contemporary craftsmanship.
+        Just an extra vase I made during my pottery class. I thought it looked nice so I decided to sell it. It may or may not be safe to drink water from. Try at your own risk!
       </p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
         <div class="lg:col-span-3">
-          <p class="w-full border border-lime p-2 rounded mt-2 text-dark-green font-2-reg">This project included creating new album packaging,
-            Crafted from high-quality stoneware or porcelain, the bowl undergoes a precise high-temperature firing process to ensure durability and resistance to chipping. The black glaze, applied through a combination of dipping and spraying techniques, creates a smooth, even finish while maintaining the natural variations that highlight its handcrafted nature. Its ergonomic form allows for a comfortable grip, while the slightly irregular shape emphasizes its organic inspiration. Designed for both aesthetic appeal and practicality, the bowl is food-safe, microwave-safe, and dishwasher-friendly, making it a perfect blend of form and function.
+          <p class="w-full border border-lime p-2 rounded mt-2 text-dark-green font-2-reg">A beautifully crafted ceramic vase with intricate black geometric and floral patterns sits gracefully on a wooden table. The warm, earthy tones of the vase contrast with the soft natural light filtering through lush monstera leaves in the background. Its classic design and dual-handle structure evoke a sense of timeless craftsmanship, making it a stunning centerpiece in any space.
           </p>
         </div>
         <div class="lg:col-span-1 flex flex-col justify-center items-end">
           <p class="text-2xl text-dark-green font-2-light">Category ······· Craft</p>
-          <p class="text-2xl text-dark-green font-2-light">Roles ·············· Sculptural</p>
+          <p class="text-2xl text-dark-green font-2-light">Type ·············· Clay</p>
           <p class="text-2xl text-dark-green font-2-light">Date ················ 2022</p>
 
         </div>        
@@ -238,6 +242,28 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
   <!-- Script Nav bar -->
   <script src="js/nav.js"></script>
+
+  <script>
+    function addToCart() {
+      alert("Added to Cart!");
+    }
+  </script>
+
+<script>
+  function addToCart(id, name, price, image) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let existingItem = cart.find(item => item.id === id);
+
+      if (existingItem) {
+          existingItem.quantity += 1;
+      } else {
+          cart.push({ id, name, price, image, quantity: 1 });
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(name + " added to cart!");
+  }
+</script>
 </body>
 
 </html>

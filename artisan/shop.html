@@ -33,12 +33,12 @@
                   <span></span>
                 </div>
               </div>
-            </div>            
+            </div>
             <div class="nav-item logo text-beige"> <img src="img/logo.png"
                 class="object-cover w-1/2 h-full items-center text-center justify-center" alt="logo">
             </div>
             <div class="nav-item search">
-              <span><ion-icon name="cart-outline" class="text-beige"></ion-icon></span>
+              <a href="cart.html"><span><ion-icon name="cart-outline" class="text-beige"></ion-icon></span></a>
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@
           <div class="nav-info text-beige">opening soon - stay tuned</div>
 
           <div class="nav-links-wrapper">
-            
+
             <div class="nav-link">
               <a href="ourpicks.html">our picks
                 <span><ion-icon name="checkmark-circle-outline"></ion-icon></span>
@@ -119,48 +119,55 @@
         <!-- Card -->
         <div class="bg-white rounded-lg p-4">
           <div class="h-64 bg-gray-200 rounded-lg mb-4">
-            <a href="product.html">
-              <img src="img/featured_album.jpg" class="object-cover w-full h-full rounded-lg" alt="featured album">
+            <a href="product_statue.html" onclick="setProductId(1)">
+              <img src="img/statue_mockup.jpg" class="object-cover w-full h-full rounded-lg" alt="Featured Statue">
             </a>
           </div>
           <div class="flex justify-between items-center">
-            <a href="product.html" class="font-2-bold text-dark-green">PIÑATA REDESIGN</a>
+            <a href="product_statue.html" class="font-2-bold text-dark-green" onclick="setProductId(1)">Virtual Angel</a>
             <p class="font-1-bold text-lime">$75 CAD</p>
           </div>
           <hr class="my-2" />
           <p class=" text-lime text-sm font-2-reg">
-            "Piñata by Freddie Gibbs and Madlib is one of my favourite albums, so I decided to redesign the album’s
-            visual identity for fun."
+            A simple angel I made with clay back when I was just learning how to sculpt.
           </p>
         </div>
 
         <!-- Card -->
         <div class="bg-white  rounded-lg p-4">
           <div class="h-64 bg-gray-200 rounded-lg mb-4">
-            <img src="img/featured_albumart.jpg" class="object-cover w-full h-full rounded-lg" alt="featured album art">
+            <a href="product_vase.html" onclick="setProductId(2)">
+              <img src="img/Vase_mockup.jpg" class="object-cover w-full h-full rounded-lg" alt="featured album art">
+            </a>
           </div>
           <div class="flex justify-between items-center">
-            <p class="font-2-bold text-dark-green">Jacaranda Poster</p>
+            <a href="product_vase.html" onclick="setProductId(2)">
+              <p class="font-2-bold text-dark-green">Vah-se</p>
+            </a>
             <p class="font-1-bold text-lime">$100 CAD</p>
           </div>
           <hr class="my-2" />
           <p class=" text-lime text-sm font-2-reg">
-            Hey, this was my poster design for Charlie's newest album, "Jacaranda". Check it out!
+            Is it Vay-se or Vah-se? Either way, check out this nice vase I made!
           </p>
         </div>
 
         <!-- Card -->
         <div class="bg-white  rounded-lg p-4">
           <div class="h-64 bg-gray-200 rounded-lg mb-4">
-            <img src="img/featured_eye.jpg" class="object-cover w-full h-full rounded-lg" alt="featured eye art">
+            <a href="product_bowl.html" onclick="setProductId(3)">
+            <img src="img/bowl_mockup.jpg" class="object-cover w-full h-full rounded-lg" alt="featured eye art">
+          </a>
           </div>
           <div class="flex justify-between items-center">
-            <p class="font-2-bold text-dark-green">EyeRiss</p>
+            <a href="product_bowl.html" onclick="setProductId(3)">
+            <p class="font-2-bold text-dark-green">Weaved</p>
+          </a>
             <p class="font-1-bold text-lime">$250 CAD</p>
           </div>
           <hr class="my-2" />
           <p class=" text-lime text-sm font-2-reg">
-            This sketch has been a labor of love and has taken me over the course of a few years to make.
+            You certainly can't put your cereal in this bowl, but it would look cool with some flowers on it! Or even just leaving it alone on the table!
           </p>
         </div>
 
@@ -182,7 +189,8 @@
         <!-- Card -->
         <div class="bg-white  rounded-lg p-4">
           <div class="h-64 bg-gray-200 rounded-lg mb-4">
-            <img src="img/featured_illustration.jpg" class="object-cover w-full h-full rounded-lg" alt="featured illustration art">
+            <img src="img/featured_illustration.jpg" class="object-cover w-full h-full rounded-lg"
+              alt="featured illustration art">
           </div>
           <div class="flex justify-between items-center">
             <p class="font-2-bold text-dark-green">TAT2</p>
@@ -197,7 +205,8 @@
         <!-- Card -->
         <div class="bg-white  rounded-lg p-4">
           <div class="h-64 bg-gray-200 rounded-lg mb-4">
-            <img src="img/featured_illustration2.jpg" class="object-cover w-full h-full rounded-lg" alt="featured illustration art 2">
+            <img src="img/featured_illustration2.jpg" class="object-cover w-full h-full rounded-lg"
+              alt="featured illustration art 2">
           </div>
           <div class="flex justify-between items-center">
             <p class="font-2-bold text-dark-green">BackStab</p>
@@ -212,7 +221,8 @@
         <!-- Card -->
         <div class="bg-white rounded-lg p-4">
           <div class="h-64 bg-gray-200 rounded-lg mb-4">
-            <img src="img/featured_photography.jpg" class="object-cover w-full h-full rounded-lg" alt="featured photography art">
+            <img src="img/featured_photography.jpg" class="object-cover w-full h-full rounded-lg"
+              alt="featured photography art">
           </div>
           <div class="flex justify-between items-center">
             <p class="font-2-bold text-dark-green">Misc.</p>
@@ -242,7 +252,8 @@
         <!-- Card -->
         <div class="bg-white  rounded-lg p-4">
           <div class="h-64 bg-gray-200 rounded-lg mb-4">
-            <img src="img/featured_cassette.jpg" class="object-cover w-full h-full rounded-lg" alt="featured cassette art">
+            <img src="img/featured_cassette.jpg" class="object-cover w-full h-full rounded-lg"
+              alt="featured cassette art">
           </div>
           <div class="flex justify-between items-center">
             <p class="font-2-bold text-dark-green">Roadstar Mixtape</p>
@@ -257,7 +268,8 @@
         <!-- Card -->
         <div class="bg-white rounded-lg p-4">
           <div class="h-64 bg-gray-200 rounded-lg mb-4">
-            <img src="img/featured_collage.jpg" class="object-cover w-full h-full rounded-lg" alt="featured collage art">
+            <img src="img/featured_collage.jpg" class="object-cover w-full h-full rounded-lg"
+              alt="featured collage art">
           </div>
           <div class="flex justify-between items-center">
             <p class="font-2-bold text-dark-green">Coollage</p>
@@ -308,7 +320,8 @@
       <div class="flex flex-wrap text-left lg:text-left">
         <div class="w-11/12 mx-auto lg:w-6/12 px-4">
           <h4 class="text-3xl font-1-bold  ">
-            <img src="img/logo.png" class="object-cover w-1/2 h-full items-center text-center justify-center" alt="logo">
+            <img src="img/logo.png" class="object-cover w-1/2 h-full items-center text-center justify-center"
+              alt="logo">
           </h4>
           <h5 class="text-lg mt-2 mb-2 text-darkGreen font-1-reg  ">
             Find us on any of these platforms, we respond 1-2 business days.
@@ -376,6 +389,12 @@
 
   <!-- Script Nav bar -->
   <script src="js/nav.js"></script>
+  <script>
+    function setProductId(id) {
+      
+        localStorage.setItem('selectedProductId', id);
+    }
+</script>
 
 </body>
 

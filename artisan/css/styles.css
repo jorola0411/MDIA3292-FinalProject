@@ -94,7 +94,7 @@
     border: 1px solid #ccc;
     background: #2D2D23;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: 0.3s;
 }
 
 .filter-btn:hover {

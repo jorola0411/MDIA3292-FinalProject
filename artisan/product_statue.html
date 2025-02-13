@@ -19,6 +19,7 @@
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="js/tailwind.config.js"></script>
 
 </head>
 
@@ -125,7 +126,7 @@
         </div>
 
 
-        <div class="lg:col-span-1">
+        <div class="lg:col-span-1 hidden md:block">
           <div class="bg-black h-[400px] rounded-lg">
             <model-viewer src="img/statue.glb" alt="3D model of a bowl" auto-rotate camera-controls></model-viewer>
           </div>

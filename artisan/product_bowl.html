@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abstract Ceramic Bowl</title>
+  <title>Weaved | LandScape</title>
   <link rel="stylesheet" href="css/styles.css">
   <!-- Navbar Styles not using Tailwind -->
   <link rel="stylesheet" href="css/navigation.css">
@@ -42,7 +42,8 @@
             <div class="nav-item logo text-beige"> <img src="img/logo.png"
                 class="object-cover w-1/2 h-full items-center text-center justify-center" alt="logo">
             </div>
-            <div class="nav-item search">
+            <div class="nav-item search gap-5">
+              <a href="favs.html"> <span><ion-icon name="heart-outline" class="text-beige"></ion-icon></span></a>
               <a href="cart.html"> <span><ion-icon name="cart-outline" class="text-beige"></ion-icon></span></a>
             </div>
           </div>
@@ -117,7 +118,7 @@
         </button>
         <button
           class="filter-btn text-white"
-          onclick="addToFavs()">Add to Favorites
+          onclick="addToFavs(3, 'Abstract Ceramic Bowl', 250.00,'img/bowl_mockup.jpg')">Add to Favorites
         </button>
       </div>
     </div>
@@ -279,6 +280,20 @@
 
       localStorage.setItem("cart", JSON.stringify(cart));
       alert(name + " added to cart!");
+  }
+
+  function addToFavs(id, name, price, image) {
+      let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      let existingItem = favorites.find(item => item.id === id);
+
+      if (existingItem) {
+          existingItem.quantity += 1;
+      } else {
+          favorites.push({ id, name, price, image, quantity: 1 });
+      }
+
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+      alert(name + " added to favorites!");
   }
 </script>
 </body>

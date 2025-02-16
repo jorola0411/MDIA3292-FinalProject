@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artist</title>
+  <title>Favorites</title>
   <link rel="stylesheet" href="css/styles.css">
   <!-- Navbar Styles not using Tailwind -->
   <link rel="stylesheet" href="css/navigation.css">
@@ -19,14 +19,9 @@
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- 3D Model Viewer -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-
 </head>
 
 <body>
-
   <!-- NAVBAR -->
   <div class="container">
     <nav>
@@ -79,8 +74,7 @@
               <a href="#">about</a>
             </div>
             <div class="nav-link">
-              <a href="#">support us</a>
-            </div>
+              <a href="#">support us</div>
             <div class="nav-link">
               <a href="#">become an artisan</a>
             </div>
@@ -106,75 +100,40 @@
       </div>
     </nav>
   </div>
-
-  <!-- Content here -->
-  <div class="min-h-screen w-11/12 mx-auto py-20">
-    <div class="flex justify-between items-center  p-4 rounded-lg">
-      <h1 class="text-center text-2xl font-2-bold mt-6 text-dark-green">Visual Artist - Jose 'Jao Jr.' Orola</h1>
-
-    </div>
-    <div class="mt-8">
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
-
-        <div class="lg:col-span-3">
-          <div class="bg-gray-300 h-64 rounded-lg overflow-hidden">
-            <img src="img/jao_canvas.jpg" class="object-cover w-full h-full" alt="Jao Canvas">
-          </div>
-        </div>
-
-
-        <div class="lg:col-span-1">
-          <p class="text-2xl text-center font-2-bold mb-5 text-dark-green">Practices</p>
-          <hr>
-          <div class="space-y-2 pt-2">
-            <p class="text-xl text-center text-lime">Painting</p>
-            <p class="text-xl text-center text-lime">Clay</p>
-            <p class="text-xl text-center text-lime">3d Modeling</p>
-            <p class="text-xl text-center text-lime">Knitting</p>
-            <p class="text-xl text-center text-lime">Crochet</p>
-            <p class="text-xl text-center text-lime">Paper Machet</p>
-          </div>
-        </div>
-        <div>
-          <div class="lg:col-span-1">
-            <div class="bg-gray-300 h-32 rounded-lg rizzler">
-              <img src="img/josecat.jpg" class="object-cover w-full h-full rounded-lg" alt="Jose's Cat Image">
-            </div>
-          </div>
-        </div>
-        <div class="lg:col-span-1">
-          <div class="bg-gray-300 h-32 rounded-lg">
-            <img src="img/jao_papermachet.jpg" class="object-cover w-full h-full rounded-lg" alt="Jose's Paper Machet Image">
-          </div>
-        </div>
-        <div class="lg:col-span-1">
-          <div class="bg-gray-300 h-32 rounded-lg">
-            <img src="img/jao_knitting.jpg" class="object-cover w-full h-full rounded-lg" alt="Jose's Knitting Image">
-          </div>
-        </div>
-
-
+  
+  <div class=" min-h-screen w-11/12 mx-auto">
+    <div class="flex justify-between items-center rounded-lg pt-12">
+      <h1 class="text-center text-6xl font-2-bold mt-6 text-dark-green">FAVORITES</h1>
+      <div class="mt-20 flex flex-col sm:flex-row justify-center md:justify-center">
+        <button
+          class="filter-btn w-full sm:w-40 px-4 py-3 rounded-3xl font-2-bold text-md  text-white border-2 border-lime text-center">
+          Continue Shopping
+        </button>
       </div>
-      <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 font-2-reg text-dark-green">
-      <p>Born in Vancouver, British Columbia, Jose Orola has been practicing art since the age of 7. First being
-        introduced to the practice of paper machet by his renowned uncle, Senior Jao, his love for art stems from his
-        familial connections. This introduction sparked a lifelong passion, blending traditional techniques with his own
-        evolving style.
-        <br>
-        <br>
-        Over the years, Jose has explored various mediums, including painting, sculpture, and mixed media, drawing
-        inspiration from his multicultural upbringing. His work often reflects themes of identity, memory, and
-        connection, paying homage to his family's legacy while forging his unique artistic path.
-        <br>
-        <br>
-        From his first exhibition at a local community center to showcasing his pieces in galleries across Canada,
-        Jose’s journey has been one of growth and discovery. His art not only celebrates cultural narratives but also
-        invites audiences to reflect on their personal stories. Today, Jose continues to push creative boundaries,
-        collaborating with other artists and participating in public art projects, all while mentoring the next
-        generation of aspiring creators.
-      </p>
+    </div>
+    <div class="grid grid-cols-4 justify-between items-center  rounded-lg pt-12">
+      <p class="col-span-3 text-xl font-2-bold mt-6 text-dark-green">Product</p>
+      <p class="col-span-1 text-right text-xl font-2-bold mt-6 text-dark-green">Actions</p>
+      <hr class="col-span-4 h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 text-dark-green">
+    </div>
+ 
+    <ul id="fav-items"></ul>
+    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 text-dark-green">
 
+    <div class="grid grid-cols-4 justify-between items-center rounded-lg pb-12">
+      <div class="col-span-3 text-xl font-2-bold mt-6 text-dark-green">
+        <p>Special Instructions</p>
+      <input type="text" placeholder="Enter text..." class="small-textbox">
+      </div>  
+      <div class="col-span-1 text-left text-xl font-2-bold mt-6 text-dark-green">
+        <p class="mt-10 mb-5">Estimated Total</p>
+        <div id="grand-total"></div> 
+        <p class="text-sm mt-5 mb-5">Tax and shipping calculated at checkout</p>
+        <button
+      class="filter-btn width: 100%; sm:w-40 px-4 py-3 rounded-3xl text-white border-2 border-lime text-center">
+      Checkout
+    </button>
+      </div> 
     </div>
   </div>
 
@@ -184,7 +143,8 @@
       <div class="flex flex-wrap text-left lg:text-left">
         <div class="w-11/12 mx-auto lg:w-6/12 px-4">
           <h4 class="text-3xl font-1-bold  ">
-            <img src="img/logo.png" class="object-cover w-1/2 h-full items-center text-center justify-center" alt="logo">
+            <img src="img/logo.png" class="object-cover w-1/2 h-full items-center text-center justify-center"
+              alt="logo">
           </h4>
           <h5 class="text-lg mt-2 mb-2 text-darkGreen font-1-reg  ">
             Find us on any of these platforms, we respond 1-2 business days.
@@ -199,7 +159,7 @@
         <div class="w-full lg:w-6/12">
           <div class="flex flex-wrap items-top mb-6">
             <div class="w-full lg:w-4/12 px-4 ml-auto">
-              <span class="block   text-md font-2-bold mb-2">Useful Links</span>
+              <span class="block text-md font-2-bold mb-2">Useful Links</span>
               <ul class="list-unstyled">
                 <li>
                   <a class="text-darkGreen block pb-2 text-sm font-2-reg" href="">About Us</a>
@@ -246,12 +206,65 @@
       </div>
     </div>
   </footer>
-
-  <!-- GSAP Navbar -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 
   <!-- Script Nav bar -->
   <script src="js/nav.js"></script>
+
+  <script>
+    function loadFavorites() {
+      let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      let favItems = document.getElementById("fav-items");
+      favItems.innerHTML = ""; // Clear the current favorites
+
+      favorites.forEach((item, index) => {
+        let pageUrl = '';
+        switch(item.id) {
+          case 1:
+            pageUrl = 'product_statue.html';
+            break;
+          case 2:
+            pageUrl = 'product_vase.html';
+            break;
+          case 3:
+            pageUrl = 'product_bowl.html';
+            break;
+          default:
+            pageUrl = '#';
+        }
+
+        let li = document.createElement("li");
+        li.innerHTML = `
+        <div class="grid grid-cols-4 pt-12">
+          <!-- Image Section -->
+          <img src="${item.image}" alt="${item.name}" style="width: 300px; height: auto; margin-right: 15px;" class="col-span-1">
+
+          <!-- Product Info -->
+          <div class="col-span-2 flex flex-col justify-center">
+              <strong>${item.name}</strong> <br>
+              <span>$${item.price.toFixed(2)}</span>
+          </div>
+
+          <!-- Actions -->
+          <div class="col-span-1 flex justify-end items-center">
+              <button onclick="removeItem(${index})"><ion-icon name="trash-outline"></ion-icon></button>
+              <a href="${pageUrl}" class="ml-4 filter-btn text-white px-4 py-2 rounded-3xl">View Page</a>
+          </div>
+        </div>   
+        `;
+        favItems.appendChild(li);
+      });
+    }
+
+    function removeItem(index) {
+      let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      favorites.splice(index, 1);
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+      loadFavorites();
+    }
+
+    loadFavorites();
+  </script>
 </body>
 
 </html>

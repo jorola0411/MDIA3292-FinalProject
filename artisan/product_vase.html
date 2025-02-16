@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Handcrafted Clay Vase</title>
+  <title>Vah-Se | LandScape</title>
   <link rel="stylesheet" href="css/styles.css">
   <!-- Navbar Styles not using Tailwind -->
   <link rel="stylesheet" href="css/navigation.css">
@@ -36,12 +36,13 @@
                   <span></span>
                 </div>
               </div>
-            </div>            
+            </div>
             <div class="nav-item logo text-beige"> <img src="img/logo.png"
                 class="object-cover w-1/2 h-full items-center text-center justify-center" alt="logo">
             </div>
-            <div class="nav-item search">
-              <a href="cart.html"><span><ion-icon name="cart-outline" class="text-beige"></ion-icon></span></a>
+            <div class="nav-item search gap-5">
+              <a href="favs.html"> <span><ion-icon name="heart-outline" class="text-beige"></ion-icon></span></a>
+              <a href="cart.html"> <span><ion-icon name="cart-outline" class="text-beige"></ion-icon></span></a>
             </div>
           </div>
         </div>
@@ -49,7 +50,7 @@
           <div class="nav-info text-beige">opening soon - stay tuned</div>
 
           <div class="nav-links-wrapper">
-            
+
             <div class="nav-link">
               <a href="ourpicks.html">our picks
                 <span><ion-icon name="checkmark-circle-outline"></ion-icon></span>
@@ -115,7 +116,7 @@
         </button>
         <button
           class="filter-btn text-white"
-          onclick="addToFavs()">Add to Favorites
+          onclick="addToFavs(2, 'Vah-se', 100.00,'img/vase_mockup.jpg')">Add to Favorites
         </button>
       </div>
     </div>
@@ -126,7 +127,7 @@
 
         <div class="lg:col-span-3 lg:row-span-2">
           <div class="bg-black h-auto rounded-lg">
-            <img src="img/Vase_mockup.jpg"object-cover w-full h-full rounded-lg" alt="featured album hero image">
+            <img src="img/Vase_mockup.jpg" class="object-cover w-full h-full rounded-lg" alt="featured album hero image">
           </div>
         </div>
 
@@ -244,13 +245,7 @@
   <script src="js/nav.js"></script>
 
   <script>
-    function addToCart() {
-      alert("Added to Cart!");
-    }
-  </script>
-
-<script>
-  function addToCart(id, name, price, image) {
+    function addToCart(id, name, price, image) {
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       let existingItem = cart.find(item => item.id === id);
 
@@ -262,8 +257,22 @@
 
       localStorage.setItem("cart", JSON.stringify(cart));
       alert(name + " added to cart!");
-  }
-</script>
+    }
+
+    function addToFavs(id, name, price, image) {
+      let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      let existingItem = favorites.find(item => item.id === id);
+
+      if (existingItem) {
+          existingItem.quantity += 1;
+      } else {
+          favorites.push({ id, name, price, image, quantity: 1 });
+      }
+
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+      alert(name + " added to favorites!");
+    }
+  </script>
 </body>
 
 </html>

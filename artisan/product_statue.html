@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product</title>
+  <title>Virtual Angel | LandScape</title>
   <link rel="stylesheet" href="css/styles.css">
   <!-- Navbar Styles not using Tailwind -->
   <link rel="stylesheet" href="css/navigation.css">
@@ -42,8 +42,8 @@
             <div class="nav-item logo text-beige"> <img src="img/logo.png"
                 class="object-cover w-1/2 h-full items-center text-center justify-center" alt="logo">
             </div>
-            <div class="nav-item search">
-
+            <div class="nav-item search gap-5">
+              <a href="favs.html"> <span><ion-icon name="heart-outline" class="text-beige"></ion-icon></span></a>
               <a href="cart.html"> <span><ion-icon name="cart-outline" class="text-beige"></ion-icon></span></a>
             </div>
           </div>
@@ -52,6 +52,7 @@
           <div class="nav-info text-beige">opening soon - stay tuned</div>
 
           <div class="nav-links-wrapper">
+
             <div class="nav-link">
               <a href="ourpicks.html">our picks
                 <span><ion-icon name="checkmark-circle-outline"></ion-icon></span>
@@ -108,7 +109,7 @@
   <!-- Content Here -->
   <div class="min-h-screen w-11/12 mx-auto p-4 mb-12">
 
-    <div class="flex justify-between items-center p-4 rounded-lg pt-12" >
+    <div class="flex justify-between items-center p-4 rounded-lg pt-12">
       <h1 class="text-center text-6xl font-2-bold mt-6 text-dark-green">Virtual Angel</h1>
       <div class="mt-20 flex flex-col sm:flex-row justify-center md:justify-center">
         <button
@@ -117,7 +118,7 @@
         </button>
         <button
           class="filter-btn text-white"
-          onclick="addToFavs()">Add to Favorites
+          onclick="addToFavs(1, 'Virtual Angel', 75,'img/statue_mockup.jpg')">Add to Favorites
         </button>
       </div>
     </div>
@@ -255,16 +256,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
   <!-- Script Nav bar -->
   <script src="js/nav.js"></script>
-<<<<<<< HEAD
 
   <script>
-    function addToCart() {
-      alert("Added to Cart!");
-    }
-  </script>
-
-<script>
-  function addToCart(id, name, price, image) {
+    function addToCart(id, name, price, image) {
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       let existingItem = cart.find(item => item.id === id);
 
@@ -276,11 +270,22 @@
 
       localStorage.setItem("cart", JSON.stringify(cart));
       alert(name + " added to cart!");
-  }
-</script>
+    }
 
-=======
->>>>>>> 9bac1da7718a018852d48e5d8dd5411f6f6f2bda
+    function addToFavs(id, name, price, image) {
+      let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      let existingItem = favorites.find(item => item.id === id);
+
+      if (existingItem) {
+          existingItem.quantity += 1;
+      } else {
+          favorites.push({ id, name, price, image, quantity: 1 });
+      }
+
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+      alert(name + " added to favorites!");
+    }
+  </script>
 </body>
 
 </html>

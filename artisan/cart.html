@@ -118,26 +118,23 @@
       <p class="col-span-1 text-right text-xl font-2-bold mt-6 text-dark-green">Total</p>
       <hr class="col-span-4 h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 text-dark-green">
     </div>
- 
+
     <ul id="cart-items"></ul>
     <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 text-dark-green">
 
-    <div class="grid grid-cols-4 justify-between items-center rounded-lg pb-12">
-      <div class="col-span-3 text-xl font-2-bold mt-6 text-dark-green">
+    <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 items-center rounded-lg pb-12">
+      <div class="sm:col-span-3 text-lg sm:text-xl font-bold text-dark-green">
         <p>Special Instructions</p>
-      <input type="text" placeholder="Enter text..." class="small-textbox">
-      </div>  
-      <div class="col-span-1 text-left text-xl font-2-bold mt-6 text-dark-green">
-        <p class="mt-10 mb-5">Estimated Total</p>
-        <div id="grand-total"></div> 
-        <p class="text-sm mt-5 mb-5">Tax and shipping calculated at checkout</p>
-        <button
-      class="filter-btn width: 100%; sm:w-40 px-4 py-3 rounded-3xl text-white border-2 border-lime text-center">
-      Checkout
-    </button>
-      </div> 
-      
-
+        <input type="text" placeholder="Enter text..." class="small-textbox w-full">
+      </div>
+      <div class="text-left sm:text-right text-lg sm:text-xl font-bold text-dark-green">
+        <p class="mt-6 sm:mt-10 mb-3 sm:mb-5">Estimated Total</p>
+        <div id="grand-total"></div>
+        <p class="text-sm mt-3 sm:mt-5 mb-3 sm:mb-5">Tax and shipping calculated at checkout</p>
+        <button class="filter-btn w-full sm:w-40 px-4 py-3 rounded-3xl text-white border-2 border-lime text-center">
+          Checkout
+        </button>
+      </div>
     </div>
 
   </div>
@@ -233,30 +230,32 @@
         let li = document.createElement("li");
         li.innerHTML = `
 
-        <div class="grid grid-cols-4 pt-12">
-        <!-- Image Section -->
-        <img src="${item.image}" alt="${item.name}" style="width: 300px; height: auto; margin-right: 15px col-span-1;">
+       <div class="grid grid-cols-4 gap-4 pt-12 items-center">
+    <!-- Image Section -->
+    <img src="${item.image}" alt="${item.name}" class="w-72 h-auto col-span-1">
 
-        <!-- Product Info -->
-        <div style="col-span-2; display: flex; flex-direction: column; justify-content: center;">
-            <strong>${item.name}</strong> <br>
-            <span>$${item.price.toFixed(2)}</span>
-        </div>
+    <!-- Product Info -->
+    <div class="col-span-1 flex flex-col justify-center">
+        <strong class="text-dark-green">${item.name}</strong>
+        <span class="text-gray-600">$${item.price.toFixed(2)}</span>
+    </div>
 
-        <!-- Quantity Controls -->
-        
-       <div style="col-span-2; display: flex; justify-content: right; align-items: center;">
-            <button onclick="updateQuantity(${index}, -1)" class="p-5 h-5 w-5 bg-stone-500 text-white rounded-full flex items-center justify-center font-bold hover:bg-neutral-800 m-3 opacity-50">-</button>
-            <span>${item.quantity}</span>
-            <button onclick="updateQuantity(${index}, 1)" class="p-5 h-5 w-5 bg-stone-500 text-white rounded-full flex items-center justify-center font-bold hover:bg-neutral-800 m-3 ">+</button>
-            <button onclick="removeItem(${index})"><ion-icon name="trash-outline"></ion-icon></button>
-       </div>
-          
-      <div style="display: flex; justify-content: right; align-items: center; col-span-1;">
-            <strong>$${(item.price * item.quantity).toFixed(2)}</strong>
-      </div>
+    <!-- Quantity Controls -->
+    <div class="col-span-1 flex justify-end items-center space-x-3">
+        <button onclick="updateQuantity(${index}, -1)" class="p-2 h-8 w-8 bg-stone-500 text-white rounded-full flex items-center justify-center font-bold hover:bg-neutral-800 opacity-50">-</button>
+        <span class="text-dark-green">${item.quantity}</span>
+        <button onclick="updateQuantity(${index}, 1)" class="p-2 h-8 w-8 bg-stone-500 text-white rounded-full flex items-center justify-center font-bold hover:bg-neutral-800">+</button>
+        <button onclick="removeItem(${index})" class="text-red-500">
+            <ion-icon name="trash-outline"></ion-icon>
+        </button>
+    </div>
 
-      </div>   
+    <!-- Total Price -->
+    <div class="col-span-1 flex justify-end items-center font-bold text-dark-green">
+        <strong>$${(item.price * item.quantity).toFixed(2)}</strong>
+    </div>
+</div>
+
 `;
         cartItems.appendChild(li);
       });

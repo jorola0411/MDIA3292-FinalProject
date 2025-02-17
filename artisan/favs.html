@@ -74,7 +74,8 @@
               <a href="#">about</a>
             </div>
             <div class="nav-link">
-              <a href="#">support us</div>
+              <a href="#">support us
+            </div>
             <div class="nav-link">
               <a href="#">become an artisan</a>
             </div>
@@ -100,7 +101,7 @@
       </div>
     </nav>
   </div>
-  
+
   <div class=" min-h-screen w-11/12 mx-auto">
     <div class="flex justify-between items-center rounded-lg pt-12">
       <h1 class="text-center text-6xl font-2-bold mt-6 text-dark-green">FAVORITES</h1>
@@ -116,11 +117,11 @@
       <p class="col-span-1 text-right text-xl font-2-bold mt-6 text-dark-green">Actions</p>
       <hr class="col-span-4 h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 text-dark-green">
     </div>
- 
+
     <ul id="fav-items"></ul>
     <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 text-dark-green">
 
-    
+
   </div>
 
   <!-- Footer -->
@@ -205,7 +206,7 @@
 
       favorites.forEach((item, index) => {
         let pageUrl = '';
-        switch(item.id) {
+        switch (item.id) {
           case 1:
             pageUrl = 'product_statue.html';
             break;
@@ -221,9 +222,9 @@
 
         let li = document.createElement("li");
         li.innerHTML = `
-        <div class="grid grid-cols-4 pt-12">
+        <div class="grid grid-cols-4 pt-12 gap-4">
           <!-- Image Section -->
-          <img src="${item.image}" alt="${item.name}" style="width: 300px; height: auto; margin-right: 15px;" class="col-span-1">
+          <img src="${item.image}" alt="${item.name}" class="w-72 h-auto col-span-1">
 
           <!-- Product Info -->
           <div class="col-span-2 flex flex-col justify-center">
@@ -232,7 +233,7 @@
           </div>
 
           <!-- Actions -->
-          <div class="col-span-1 flex justify-end items-center">
+          <div class="col-span-1 flex justify-end items-center gap-2">
               <button onclick="removeItem(${index})"><ion-icon name="trash-outline"></ion-icon></button>
               <a href="${pageUrl}" class="ml-4 filter-btn text-white px-4 py-2 rounded-3xl">View Page</a>
           </div>

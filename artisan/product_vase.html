@@ -110,13 +110,10 @@
     <div class="flex justify-between items-center  p-4 rounded-lg pt-12">
       <h1 class="text-center text-6xl font-2-bold mt-6 text-dark-green">VAH-SE</h1>
       <div class="mt-20 flex flex-col sm:flex-row justify-center md:justify-center">
-        <button
-          class="filter-btn text-white"
-          onclick="addToCart(2, 'Vah-se', 100.00,'img/vase_mockup.jpg')">Add to Cart
+        <button class="filter-btn text-white" onclick="addToCart(2, 'Vah-se', 100.00,'img/vase_mockup.jpg')">Add to Cart
         </button>
-        <button
-          class="filter-btn text-white"
-          onclick="addToFavs(2, 'Vah-se', 100.00,'img/vase_mockup.jpg')">Add to Favorites
+        <button class="filter-btn text-white" onclick="addToFavs(2, 'Vah-se', 100.00,'img/vase_mockup.jpg')">Add to
+          Favorites
         </button>
       </div>
     </div>
@@ -127,20 +124,20 @@
 
         <div class="lg:col-span-3 lg:row-span-2">
           <div class="bg-black h-auto rounded-lg">
-            <img src="img/Vase_mockup.jpg" class="object-cover w-full h-full rounded-lg" alt="featured album hero image">
+            <img src="img/Vase_mockup.jpg" class="object-cover w-full h-full rounded-lg" alt="Vase mockup">
           </div>
         </div>
 
 
         <div class="lg:col-span-1">
           <div class="bg-black h-[290px] rounded-lg">
-            <model-viewer src="glb/vase.glb" alt="3D model of a bowl" auto-rotate camera-controls></model-viewer>
+            <model-viewer src="glb/vase.glb" alt="3D model of a vase" auto-rotate camera-controls></model-viewer>
           </div>
         </div>
 
         <div class="lg:col-span-1">
           <div class="bg-black h-auto rounded-2xl">
-            <img src="img/vase_qr.png" class="object-cover w-auto " alt="featured album front image">
+            <img src="img/vase_qr.png" class="object-cover w-auto " alt="qr code for vase">
           </div>
           <p class="text-right text-7xl">$100.00</p>
         </div>
@@ -153,12 +150,17 @@
         <strong class="text-4xl font-1-bold">Vah-se Overview</strong>
         <br>
         <br>
-        Just an extra vase I made during my pottery class. I thought it looked nice so I decided to sell it. It may or may not be safe to drink water from. Try at your own risk!
+        Just an extra vase I made during my pottery class. I thought it looked nice so I decided to sell it. It may or
+        may not be safe to drink water from. Try at your own risk!
       </p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
         <div class="lg:col-span-3">
-          <p class="w-full border border-lime p-2 rounded mt-2 text-dark-green font-2-reg">A beautifully crafted ceramic vase with intricate black geometric and floral patterns sits gracefully on a wooden table. The warm, earthy tones of the vase contrast with the soft natural light filtering through lush monstera leaves in the background. Its classic design and dual-handle structure evoke a sense of timeless craftsmanship, making it a stunning centerpiece in any space.
+          <p class="w-full border border-lime p-2 rounded mt-2 text-dark-green font-2-reg">A beautifully crafted ceramic
+            vase with intricate black geometric and floral patterns sits gracefully on a wooden table. The warm, earthy
+            tones of the vase contrast with the soft natural light filtering through lush monstera leaves in the
+            background. Its classic design and dual-handle structure evoke a sense of timeless craftsmanship, making it
+            a stunning centerpiece in any space.
           </p>
         </div>
         <div class="lg:col-span-1 flex flex-col justify-center items-end">
@@ -166,7 +168,7 @@
           <p class="text-2xl text-dark-green font-2-light">Type ·············· Clay</p>
           <p class="text-2xl text-dark-green font-2-light">Date ················ 2022</p>
 
-        </div>        
+        </div>
       </div>
     </div>
   </div>
@@ -176,7 +178,8 @@
       <div class="flex flex-wrap text-left lg:text-left">
         <div class="w-11/12 mx-auto lg:w-6/12 px-4">
           <h4 class="text-3xl font-1-bold  ">
-            <img src="img/logo.png" class="object-cover w-1/2 h-full items-center text-center justify-center" alt="logo">
+            <img src="img/logo.png" class="object-cover w-1/2 h-full items-center text-center justify-center"
+              alt="logo">
           </h4>
           <h5 class="text-lg mt-2 mb-2 text-darkGreen font-1-reg  ">
             Find us on any of these platforms, we respond 1-2 business days.
@@ -250,9 +253,9 @@
       let existingItem = cart.find(item => item.id === id);
 
       if (existingItem) {
-          existingItem.quantity += 1;
+        existingItem.quantity += 1;
       } else {
-          cart.push({ id, name, price, image, quantity: 1 });
+        cart.push({ id, name, price, image, quantity: 1 });
       }
 
       localStorage.setItem("cart", JSON.stringify(cart));
@@ -264,9 +267,9 @@
       let existingItem = favorites.find(item => item.id === id);
 
       if (existingItem) {
-          existingItem.quantity += 1;
+        existingItem.quantity += 1;
       } else {
-          favorites.push({ id, name, price, image, quantity: 1 });
+        favorites.push({ id, name, price, image, quantity: 1 });
       }
 
       localStorage.setItem("favorites", JSON.stringify(favorites));

@@ -112,12 +112,10 @@
     <div class="flex justify-between items-center  p-4 rounded-lg pt-12">
       <h1 class="text-center text-6xl font-2-bold mt-6 text-dark-green">WEAVED</h1>
       <div class="mt-20 flex flex-col sm:flex-row justify-center md:justify-center">
-        <button
-          class="filter-btn text-white"
+        <button class="filter-btn text-white"
           onclick="addToCart(3, 'Abstract Ceramic Bowl', 250.00,'img/bowl_mockup.jpg')">Add to Cart
         </button>
-        <button
-          class="filter-btn text-white"
+        <button class="filter-btn text-white"
           onclick="addToFavs(3, 'Abstract Ceramic Bowl', 250.00,'img/bowl_mockup.jpg')">Add to Favorites
         </button>
       </div>
@@ -129,8 +127,7 @@
 
         <div class="lg:col-span-3 lg:row-span-2">
           <div class="bg-black h-auto rounded-lg">
-            <img src="img/bowl_mockup.jpg" class="object-cover w-full h-full rounded-lg"
-              alt="featured album hero image">
+            <img src="img/bowl_mockup.jpg" class="object-cover w-full h-full rounded-lg" alt="bowl product image">
           </div>
         </div>
 
@@ -143,12 +140,12 @@
 
         <div class="lg:col-span-1">
           <div class="bg-black h-auto rounded-2xl">
-            <img src="img/bowl_qr.png" class="object-cover w-auto " alt="featured album front image">
+            <img src="img/bowl_qr.png" class="object-cover w-auto " alt="qr code for bowl">
           </div>
           <p class="text-right text-7xl">$250.00</p>
         </div>
 
-        
+
 
       </div>
       <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 text-dark-green">
@@ -181,7 +178,6 @@
           <p class="text-2xl text-dark-green font-2-light">Category ······· Craft</p>
           <p class="text-2xl text-dark-green font-2-light">Roles ·············· Sculptural</p>
           <p class="text-2xl text-dark-green font-2-light">Date ················ 2022</p>
-
         </div>
       </div>
     </div>
@@ -267,35 +263,35 @@
     }
   </script>
 
-<script>
-  function addToCart(id, name, price, image) {
+  <script>
+    function addToCart(id, name, price, image) {
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       let existingItem = cart.find(item => item.id === id);
 
       if (existingItem) {
-          existingItem.quantity += 1;
+        existingItem.quantity += 1;
       } else {
-          cart.push({ id, name, price, image, quantity: 1 });
+        cart.push({ id, name, price, image, quantity: 1 });
       }
 
       localStorage.setItem("cart", JSON.stringify(cart));
       alert(name + " added to cart!");
-  }
+    }
 
-  function addToFavs(id, name, price, image) {
+    function addToFavs(id, name, price, image) {
       let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
       let existingItem = favorites.find(item => item.id === id);
 
       if (existingItem) {
-          existingItem.quantity += 1;
+        existingItem.quantity += 1;
       } else {
-          favorites.push({ id, name, price, image, quantity: 1 });
+        favorites.push({ id, name, price, image, quantity: 1 });
       }
 
       localStorage.setItem("favorites", JSON.stringify(favorites));
       alert(name + " added to favorites!");
-  }
-</script>
+    }
+  </script>
 </body>
 
 </html>
